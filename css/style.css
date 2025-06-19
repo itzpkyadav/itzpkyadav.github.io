@@ -1430,81 +1430,89 @@ body.offcanvas {
 
 
 
- .project-section {
-      padding: 20px;
-    }
+/* Project Card Container Styling */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
 
-    .project-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      transition: transform 0.3s ease;
-    }
+.project-card:hover {
+  transform: translateY(-5px);
+}
 
-    .project-card:hover {
-      transform: translateY(-4px);
-    }
+/* Image inside the card */
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
 
-    .project-image {
-      width: 100%;
-      height: 150px;
-      object-fit: contain;
-      background: #a32430;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+/* Card Body Layout */
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
 
-    .project-image img {
-      max-height: 100%;
-      max-width: 80%;
-    }
+/* Card Title Styling */
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
-    .card-body {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
+/* Tech Badges (Flutter, Android, etc.) */
+.badges {
+  margin-bottom: 10px;
+}
 
-    .card-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+.badge {
+  display: inline-block;
+  background-color: #eee;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
 
-    .badges {
-      margin-bottom: 12px;
-    }
+/* Description Text */
+.card-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
 
-    .badge {
-      background-color: #e2e6ea;
-      color: #333;
-      margin-right: 6px;
-      font-size: 13px;
-    }
+/* Button Styling */
+.btn-primary {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+}
 
-    .card-text {
-      flex-grow: 1;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 16px;
-    }
+.btn-primary:hover {
+  background-color: #0d8bf2;
+}
 
-    .btn-primary {
-      background-color: #2196f3;
-      border: none;
-    }
+/* Row Spacing */
+.row > [class*="col-"] {
+  margin-bottom: 30px;
+}
 
-    @media (max-width: 768px) {
-      .col-md-4 {
-        margin-bottom: 20px;
-      }
-    }
+/* Section Padding (Top/Bottom) */
+.colorlib-projects {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
 
 /*
 .project-card {
