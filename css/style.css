@@ -1429,32 +1429,34 @@ body.offcanvas {
   opacity: 0; }
 
 .project-card {
-    border-radius: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
-    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 }
 
-.project-card .card-img-top {
+.skeleton-img {
+    width: 100%;
     height: 180px;
-    object-fit: cover;
+    background-color: #e0e0e0;
+    animation: pulse 1.5s infinite ease-in-out;
 }
 
-.project-card .card-body {
-    padding: 15px;
-}
-
-.project-card .btn {
-    background-color: #f14e95;
-    border: none;
-    font-weight: 500;
-}
-
-.project-card .btn:hover {
-    background-color: #d63b7d;
+@keyframes pulse {
+    0% {
+        background-color: #e0e0e0;
+    }
+    50% {
+        background-color: #f0f0f0;
+    }
+    100% {
+        background-color: #e0e0e0;
+    }
 }
