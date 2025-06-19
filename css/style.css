@@ -1427,3 +1427,34 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+.project-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card .card-body {
+    padding: 15px;
+}
+
+.project-card .btn {
+    background-color: #f14e95;
+    border: none;
+    font-weight: 500;
+}
+
+.project-card .btn:hover {
+    background-color: #d63b7d;
+}
