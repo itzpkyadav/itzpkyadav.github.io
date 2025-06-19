@@ -1438,16 +1438,13 @@ body.offcanvas {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-bottom: 20px;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
+  min-height: 400px; /* Ensures consistent height */
 }
 
 .card-img-wrapper {
-  overflow: hidden;
   height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .card-img {
@@ -1457,15 +1454,11 @@ body.offcanvas {
   transition: transform 0.3s ease;
 }
 
-.project-card:hover .card-img {
-  transform: scale(1.05);
-}
-
 .card-body {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex-grow: 1;
 }
 
 .card-title {
@@ -1504,6 +1497,8 @@ body.offcanvas {
   text-decoration: none;
   font-size: 14px;
   transition: background-color 0.2s;
+  align-self: flex-start;
+  margin-top: auto;
 }
 
 .btn-sm:hover {
